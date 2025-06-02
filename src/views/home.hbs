@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="/src/Assets/style/style.css">
+    <link rel="stylesheet" href="../Assets/style/style.css">
 
     <title>Adil Aulia Azuri</title>
 </head>
@@ -13,7 +13,7 @@
 <body>
     <div class=" min-h-screen flex flex-col bg-white dark:bg-gray-900">
         <!-- navbar -->
-        <nav class="bg-white dark:bg-gray-900 border-gray-500">
+        <nav class="bg-white dark:bg-gray-900 border-gray-500 px-10">
             <div class="flex flex-wrap justify-between pt-1 bg-gray-900">
                 <!-- logo SE -->
                 <div class="flex">
@@ -30,7 +30,7 @@
                     <!-- whatsapp -->
                     <li class="">
                         <a href=""
-                            class="flex gap-2 bg-green-500 hover:bg-green-600 transition duration-300 px-2 py-1 rounded-md text-white text-sm">
+                            class="flex gap-2 bg-green-500 hover:bg-green-600 transition duration-300 px-4 py-2 rounded-md text-white text-sm">
                             <img src="Assets/img/whatsapp-brands.svg" class="w-3 flex"></img>
                             Let's Talk
                         </a>
@@ -38,7 +38,7 @@
                     <!-- download CV -->
                     <li class="">
                         <a href=""
-                            class="flex gap-2 bg-black dark:bg-white text-white dark:text-black px-2 py-1 rounded-md text-sm">
+                            class="flex gap-2 bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-md text-sm">
                             <img src="Assets/img/file-earmark-arrow-down.svg" class="w-3 flex"></img>
                             Download CV</a>
                     </li>
@@ -116,144 +116,74 @@
             </section>
 
             <!-- tech  -->
-            <section class="bg-white dark:bg-gray-900  items-center mt-20">
-                <h2 class="ml-15 text-3xl font-bold mb-25 text-white">Tech Stack - Tools I Use Everyday</h2>
-                <div class="scroller  justify-center" data-direction="right" data-speed="slow">
-                    <div class="scroller__inner flex flex-wrap gap-25 justify-center">
-                        <!-- expressjs -->
-                        <div class="">
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/express.svg" alt="expressjs"
-                                    class="size-25 bg-gray-500 rounded-md">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">Express JS</p>
-                        </div>
-                        <!-- javascript -->
-                        <div class="">
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/javascript.svg" alt="javascript" class="size-25">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">JavaScript</p>
-                        </div>
-                        <!-- mongo DB -->
-                        <div>
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/mongodb.svg" alt="mongodb" class="size-25">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">MongoDB</p>
-                        </div>
-                        <!-- next js -->
-                        <div>
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/next-js.svg" alt="nextjs" class="size-25">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">Next JS</p>
-                        </div>
-                        <!-- dot Net -->
-                        <div>
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/dotnet.svg" alt="net" class="size-25">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">.Net</p>
-                        </div>
-                        <!-- node js -->
-                        <div>
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/node-js.svg" alt="nodejs" class="size-25">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">Node JS</p>
-                        </div>
-                        <!-- postgre -->
-                        <div class=" ">
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/postgresql.svg" alt="postgre" class="size-25">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">PostgreSQL</p>
-                        </div>
-                        <!-- react -->
-                        <div>
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/reactjs-.svg" alt="react" class="size-25">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">React JS</p>
-                        </div>
-                        <!-- tailwind -->
-                        <div>
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/tailwindcss.svg" alt="tailwind" class="size-25">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">Tailwindcss</p>
-                        </div>
-                        <!-- typescript -->
-                        <div>
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/typescript.svg" alt="typescript" class="size-25">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">TypeScript</p>
-                        </div>
-                        <!-- Unity -->
-                        <div>
-                            <div class="bg-gray-800 p-5 rounded-2xl mb-3 flex justify-center">
-                                <img src="Assets/img/unity.svg" alt="unity" class="size-25 bg-gray-600 rounded-md">
-                            </div>
-                            <p class="text-center text-2xl text-white dark:text-gray-300">Unity</p>
-                        </div>
-                    </div>
-                </div>
 
+            <section class="bg-white dark:bg-gray-900 mt-20">
+                <div class="flex flex-col">
+                    <h2 class="mx-15 text-3xl font-bold mb-10 text-white">Tech Stack - Tools I Use Everyday</h2>
+                    <div class="mx-10 flex justify-center ">
+
+                        <!-- tech scroll -->
+                        <div class="scroller w-[100%]" data-direction="right" data-speed="slow">
+                            <div class="scroller__inner">
+                                {{#each techs.rows}}
+                                <div class="flex flex-col justify-center p-1">
+                                    <div
+                                        class="flex justify-center bg-gray-800 w-15 h-15 p-3 rounded-xl mb-3 transform transition duration-400 hover:scale-110">
+                                        <img src="{{this.imgsrc}}" alt="" class="">
+                                    </div>
+                                    <p class="text-center text-md text-white dark:text-gray-300">{{this.nameTech}}</p>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+
+                    </div>
             </section>
 
 
 
             <!-- Experience -->
-            <section class="bg-white dark:bg-gray-900 pb-15 w-auto">
-                <h2 class="ml-15 text-3xl font-bold mb-25 text-white">Work Experience</h2>
+            <section class="bg-white dark:bg-gray-900 my-20 w-auto">
+                <h2 class="mx-15 text-3xl font-bold mb-10 text-white">Work Experience</h2>
 
                 <!-- Fullstack -->
+                {{#each experiences}}
                 <div class="flex justify-center mb-7">
-                    <div class="flex bg-white dark:bg-gray-800 rounded-xl w-[90%] justify-between p-5">
+                    <div class="flex bg-white dark:bg-gray-800 w-[90%] rounded-xl justify-between p-5">
                         <div class="flex">
-                            <img src="/Assets/img/testpic.jpg" alt="Full-Stack" class="size-20 rounded-lg mr-10" />
+                            <img src="{{imgsrc}}" alt="Full-Stack" class="size-20 rounded-lg mr-10" />
                             <div class="ml-8x">
                                 <div class="flex flex-col items-start text-white mb-5">
                                     <div class="justify-start">
-                                        <h3 class="font-bold text-2xl">Full Stack Web Developer</h3>
-                                        <p class="text-green-600 dark:text-green-400 text-xl">Microsoft (Semoga)</p>
+                                        {{!-- render db name --}}
+                                        <h3 class="font-bold text-2xl">{{namePosition}}</h3>
+                                        {{!-- render db company --}}
+                                        <p class="text-green-600 dark:text-green-400 text-xl">{{company}}</p>
                                     </div>
 
                                 </div>
                                 <ul
                                     class=" text-gray-600 dark:text-gray-400 text-md space-y-1 list-disc list-inside mb-5">
-                                    <li>Full Stack Development application</li>
-                                    <li>I usually work with JavaScript, React, Node.js, and related technologies</li>
-                                    <li>Providing code reviews and technical guidance</li>
-                                    <li>Developing curriculum and learning materials</li>
-                                    <li>Conducting technical interviews and assessments</li>
+                                    {{#each jobdesk}}
+                                    <li>{{this}}</li>
+                                    {{/each}}
+
                                 </ul>
                                 <div class="flex gap-3 text-sm font-medium">
+                                    {{#each tech}}
                                     <p
                                         class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-400">
-                                        JavaScript</p>
-                                    <p
-                                        class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-400">
-                                        React</p>
-                                    <p
-                                        class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-400">
-                                        Node.js</p>
-                                    <p
-                                        class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-400">
-                                        Express</p>
-                                    <p
-                                        class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-400">
-                                        PostgreSQL</p>
+                                        {{this}}</p>
+                                    {{/each}}
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <p class="text-xl text-gray-500 dark:text-gray-400">Future</p>
+                        <div class="">
+                            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">{{duration}}</p>
                         </div>
                     </div>
                 </div>
+                {{/each}}
 
             </section>
 
@@ -264,31 +194,25 @@
                 <div class="flex justify-center mx-15">
                     <div class="grid grid-cols-2 gap-10">
 
-                        <!-- PROJECT 1 -->
+                        <!-- PROJECTs -->
+                        {{#each projects.rows}}
                         <div class="flex  bg-white dark:bg-gray-800 rounded-2xl mb-5">
                             <div class="">
                                 <div class="flex justify-center flex bg-gray-700 rounded-t-2xl">
-                                    <img src="/Assets/img/fakturly.png" alt="Full-Stack" class=" w-70" />
+                                    <img src="{{this.projectsrc}}" alt="{{this.projectTitle}}" class="w-50" />
+
                                 </div>
                                 <div class="m-8 flex flex-col">
                                     <div class="">
-                                        <h3 class="font-bold text-xl text-white mb-2">Fakturly</h3>
+                                        <h3 class="font-bold text-xl text-white mb-2">{{this.projectTitle}}</h3>
                                         <p class="text-lg text-gray-400 space-y-10">
-                                            Digital invoice and payment reminder solution that makes billing management
-                                            easier.
-                                            Built with modern tech stack for optimal performance.
+                                            {{this.description}}
                                     </div>
                                     <div class="flex gap-3 text-sm font-medium text-gray-600 dark:text-gray-400 my-5">
+                                        {{#each techs}}
                                         <p class="bg-gray-100 dark:bg-gray-700 rounded-full px-2 py-1">
-                                            JavaScript</p>
-                                        <p class="bg-gray-100 dark:bg-gray-700 rounded-full px-2 py-1">
-                                            React.JS</p>
-                                        <p class="bg-gray-100 dark:bg-gray-700 rounded-full px-2 py-1">
-                                            Node.JS</p>
-                                        <p class="bg-gray-100 dark:bg-gray-700 rounded-full px-2 py-1">
-                                            Express</p>
-                                        <p class="bg-gray-100 dark:bg-gray-700 rounded-full px-2 py-1">
-                                            PostgreSQL</p>
+                                            {{this}}</p>
+                                        {{/each}}
                                     </div>
                                     <div class="flex gap-10 mt-5 gap-3 text-md">
                                         <div class="flex gap-2">
@@ -303,7 +227,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        {{/each}}
 
                     </div>
                 </div>
@@ -339,10 +263,7 @@
 
     </div>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    <script src="index.js"></script>
+    <script src="../Assets/js/index.js"></script>
 </body>
 
 </html>
