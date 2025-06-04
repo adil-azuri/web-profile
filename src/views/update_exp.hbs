@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Update Experience</title>
+</head>
+
+<body>
+    <div class=" min-h-screen flex flex-col bg-white dark:bg-gray-900">
+        <!-- navbar -->
+
+        {{>navbar}}
+
+        <div class="bg-white dark:bg-gray-900">
+            {{!-- form input --}}
+            <div class="flex justify-center">
+                <form action="/update_exp/:id" method="POST" enctype="multipart/form-data"
+                    class="mt-10 p-6 rounded-lg shadow-xl w-full max-w-4xl space-y-6 dark:bg-gray-800">
+                    <h2 class="text-2xl font-semibold text-gray-300 mb-4">Update Experience Form</h2>
+
+                    <input type="hidden" name="id" value="{{data.id}}" />
+
+                    {{!-- title input --}}
+                    <label for="title" class="block text-gray-400 font-medium mb-2">Nama Posisi</label>
+                    <input type="text" name="title" value="{{data.position}}"
+                        class="w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition text-white" />
+
+                    {{!-- company input --}}
+                    <label for="company" class="block text-gray-400 font-medium mb-2">Company</label>
+                    <input type="text" name="company" value="{{data.company}}"
+                        class="w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition text-white" />
+
+                    {{!-- INPUT DATE --}}
+                    <div class="flex justify-center gap-20 text-lg text-gray-400 max-w-4xl">
+                        <div class="flex flex-col py-2 rounded-md  w-full">
+                            <label for="startDate">Start Date : </label>
+                            <input type="date" name="startDate" class="bg-gray-700 rounded-md text-white px-3 py-2">
+                        </div>
+                        <div class="flex flex-col py-2 rounded-md w-full">
+                            <label for="endDate">End Date : </label>
+                            <input type="date" name="endDate" class="bg-gray-700 rounded-md text-white px-3 py-2">
+                        </div>
+
+                    </div>
+
+                    {{!-- jobdesk input --}}
+                    <div>
+                        <label for="title" class="block text-gray-400 font-medium mb-2">Jobdesk</label>
+                        {{#each data.jobdesk}}
+                        <input type="text" name="jobdesk" value="{{this}}"
+                            class="w-full mb-2 px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition text-white" />
+                        {{/each}}
+
+                    </div>
+
+                    <div class="">
+                        <label for="techs" class="text-gray-400 font-medium">Techs Used</label>
+                        <div class="flex gap-3 justify-center mt-5">
+
+                            {{#each data.tech}}
+                            <input type="text" name="tech" value="{{this}}"
+                                class="mb-2 py-2 px-2 border border-gray-600 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition text-white" />
+                            {{/each}}
+
+                        </div>
+                    </div>
+
+                    {{!-- Image EXP --}}
+                    <div>
+                        <label for="file" class="block text-gray-400 font-medium mb-2">Image Experience</label>
+                        <input type="file" name="expPicture"
+                            class="w-full text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200 focus:outline-none" />
+
+                    </div>
+
+                    <div class="flex justify-center">
+                        <button type="submit"
+                            class=" bg-blue-600 text-white font-semibold py-2 px-10 rounded-md hover:bg-blue-700 transition">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

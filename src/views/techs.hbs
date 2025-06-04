@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Techs</title>
+</head>
+
+<body>
+    <div class=" min-h-screen flex flex-col bg-white dark:bg-gray-900">
+        <!-- navbar -->
+
+        {{>navbar}}
+
+        <div class="bg-white dark:bg-gray-900">
+            {{!-- form input --}}
+            <div class="flex justify-center">
+                <form action="/techs" method="POST" enctype="multipart/form-data"
+                    class="mt-10 p-6 rounded-lg shadow-xl w-full max-w-2xl space-y-6 dark:bg-gray-800">
+
+                    <h2 class="text-2xl font-semibold text-gray-300 mb-4">Techs Input</h2>
+
+                    <div>
+
+                        <label for="nametechs" class="block text-gray-400 font-medium mb-2">Nama</label>
+                        <input type="text" name="nametechs"
+                            class="w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition text-white" />
+                    </div>
+
+                    <div>
+                        <label for="file" class="block text-gray-400 font-medium mb-2">Gambar</label>
+                        <input type="file" name="techsPic"
+                            class="w-full text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200 focus:outline-none" />
+                    </div>
+
+                    <div class="flex justify-center">
+                        <button type="submit"
+                            class=" bg-blue-600 text-white font-semibold py-2 px-10 rounded-md hover:bg-blue-700 transition">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
+
+            </div>
+
+            {{!-- tampilkan techs saat ini --}}
+            <div class=" mx-50">
+                <h2 class="text-2xl font-semibold text-white mx-5 my-10">Techs Now</h2>
+                <table class="mt-2 min-w-full text-center table-auto border-collapse mb-10  shadow-xl">
+                    <thead class="text-gray-600 dark:text-gray-400">
+                        <tr class="border-b-3 border-gray-500">
+                            <th class=" px-4 py-2 ">Name Techs</th>
+                            <th class=" px-4 py-2 ">Image Techs</th>
+                            <th class=" px-4 py-2 ">Delete</th>
+                        </tr>
+                        <th class=""></th>
+                    </thead>
+                    {{#each techs.rows}}
+                    <tbody>
+                        <tr class=" border-b border-gray-600 text-black dark:text-gray-300">
+                            <td class="px-4 py-2">{{this.nameTech}}
+
+                            </td>
+                            <td class="flex justify-center px-4 py-2 ">
+                                <img src="Assets/uploads/{{this.imgsrc}}" class="size-10 bg-white rounded-md">
+                            </td>
+                            <td class="">
+                                <div class="flex justify-center text-gray-300">
+                                    <form action="/deleteTech" method="post">
+                                        <input type="hidden" name="id" value={{this.id}}
+                                            class=" px-4 py-2 border border-gray-600 text-white" />
+                                        <button type="submit"
+                                            class=" bg-red-800 px-4 py-1 rounded-full hover:bg-red-700">Delete</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    {{/each}}
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

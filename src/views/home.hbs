@@ -12,43 +12,7 @@
 
 <body>
     <div class=" min-h-screen flex flex-col bg-white dark:bg-gray-900">
-        <!-- navbar -->
-        <nav class="bg-white dark:bg-gray-900 border-gray-500 px-10">
-            <div class="flex flex-wrap justify-between pt-1 bg-gray-900">
-                <!-- logo SE -->
-                <div class="flex">
-                    <a href="" class="flex items-center px-8 0">
-                        <img src="/Assets/img/logoad.png" class="h-8 hover:scale-110 transition duration-300"
-                            alt="Logo" />
-                    </a>
-                </div>
-                <!-- navbar button -->
-                <ul class="flex text-gray-400 gap-5  py-3">
-                    <li class=""><a href="">Tech Stack</a></li>
-                    <li class=""><a href="">Experience</a></li>
-                    <li class=""><a href="">Projects</a></li>
-                    <!-- whatsapp -->
-                    <li class="">
-                        <a href=""
-                            class="flex gap-2 bg-green-500 hover:bg-green-600 transition duration-300 px-4 py-2 rounded-md text-white text-sm">
-                            <img src="Assets/img/whatsapp-brands.svg" class="w-3 flex"></img>
-                            Let's Talk
-                        </a>
-                    </li>
-                    <!-- download CV -->
-                    <li class="">
-                        <a href=""
-                            class="flex gap-2 bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-md text-sm">
-                            <img src="Assets/img/file-earmark-arrow-down.svg" class="w-3 flex"></img>
-                            Download CV</a>
-                    </li>
-                    <!-- Change Mode -->
-                    <button onclick="" class="text-gray-300 hover:text-gray-400 mx-2">
-                        Change Mode
-                    </button>
-                </ul>
-            </div>
-        </nav>
+        {{>navbar}}
 
         <main class="bg-white dark:bg-gray-900">
             <!-- introduction -->
@@ -129,7 +93,7 @@
                                 <div class="flex flex-col justify-center p-1">
                                     <div
                                         class="flex justify-center bg-gray-800 w-15 h-15 p-3 rounded-xl mb-3 transform transition duration-400 hover:scale-110">
-                                        <img src="{{this.imgsrc}}" alt="" class="">
+                                        <img src="/Assets/uploads/{{this.imgsrc}}" alt="" class="">
                                     </div>
                                     <p class="text-center text-md text-white dark:text-gray-300">{{this.nameTech}}</p>
                                 </div>
@@ -140,18 +104,16 @@
                     </div>
             </section>
 
-
-
             <!-- Experience -->
             <section class="bg-white dark:bg-gray-900 my-20 w-auto">
                 <h2 class="mx-15 text-3xl font-bold mb-10 text-white">Work Experience</h2>
 
-                <!-- Fullstack -->
                 {{#each experiences}}
                 <div class="flex justify-center mb-7">
                     <div class="flex bg-white dark:bg-gray-800 w-[90%] rounded-xl justify-between p-5">
                         <div class="flex">
-                            <img src="{{imgsrc}}" alt="Full-Stack" class="size-20 rounded-lg mr-10" />
+
+                            <img src="Assets/uploads/{{imgsrc}}" alt="Full-Stack" class="size-20 rounded-lg mr-10" />
                             <div class="ml-8x">
                                 <div class="flex flex-col items-start text-white mb-5">
                                     <div class="justify-start">
@@ -199,7 +161,8 @@
                         <div class="flex  bg-white dark:bg-gray-800 rounded-2xl mb-5">
                             <div class="">
                                 <div class="flex justify-center flex bg-gray-700 rounded-t-2xl">
-                                    <img src="{{this.projectsrc}}" alt="{{this.projectTitle}}" class="w-50" />
+                                    <img src="Assets/uploads/{{this.projectsrc}}" alt="{{this.projectTitle}}"
+                                        class="h-50" />
 
                                 </div>
                                 <div class="m-8 flex flex-col">
@@ -235,7 +198,6 @@
             </section>
 
         </main>
-
 
         <footer>
             <div class="flex flex-col my-30 text-white justify-center">
